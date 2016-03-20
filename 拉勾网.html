@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #head {
+            width: 1366px;
+            height: 30px;
+            background: #000000;
+        }
+
+        #head-inner {
+            position: relative;
+        }
+
+        #head-inner-1 {
+            line-height: 30px;
+            height: 30px;
+        }
+
+        #head-inner-1 a {
+            width: 95px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 14px;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            opacity: 0.9;
+            filter: alpha(opacity=90)
+        }
+
+        #head-inner-1 .head-a1 {
+            position: absolute;
+            top: 7.5px;
+            left: 15px;
+            padding-left: 7px;
+            color: #0AD7A3;
+            background: url(img/app_icon_43ba565.png) no-repeat 5px 0;
+        }
+
+        #head-inner-1 .head-a1:hover {
+            opacity: 1;
+            filter: alpha(opacity=100)
+        }
+
+        #head-inner-1 .head-a2 {
+            position: absolute;
+            top: 7.5px;
+            left: 110px;
+            border-left: 1px solid #999999;
+        }
+
+        #head-inner-1 .head-a2:hover {
+            opacity: 1;
+            filter: alpha(opacity=100)
+        }
+
+        .head-inner-r {
+            position: absolute;
+            top: 7.5px;
+            right: 10px;
+            width: 110px;
+            color: white;
+            font-size: 14px;
+            overflow: hidden;
+            list-style: none;
+
+        }
+
+        .head-inner-r li {
+            float: left;
+            width: 52px;
+            text-align: center;
+            opacity: 0.9;
+            filter: alpha(opacity=90)
+        }
+
+        .head-inner-r li:hover {
+            opacity: 1;
+            filter: alpha(opacity=100)
+        }
+
+        .head-inner-r li.right {
+            border-left: 1px solid #999999;
+        }
+
+        #tnav {
+            width: 1366px;
+            height: 54px;
+            border-top: 1px solid #d2d2d2;
+            border-bottom: 1px solid #d2d2d2;
+            background: #fafafa;
+        }
+
+        #tnav .tnav-inner {
+            width: 1024px;
+            margin: 0 auto;
+            height: 54px;
+            position: relative;
+        }
+
+        #tnav .tnav-inner-1 {
+            width: 260px;
+            height: 54px;
+
+        }
+
+        #tnav .tnav-inner-1 a, .tnav-inner ul li a {
+            text-decoration: none;
+        }
+
+        #tnav .tnav-inner-1 a h1 {
+            display: block;
+            width: 97px;
+            height: 34px;
+            margin-top: 10px;
+            background: url("img/logo_cec6327.png") no-repeat;
+        }
+
+        .tnav-inner-1 .city {
+            position: absolute;
+            top: 0;
+            left: 110px;
+            float: left;
+            height: 44px;
+            padding-top: 10px;
+        }
+
+        .tnav-inner-1 .city em {
+            font-size: 12px;
+            font-style: normal;
+            color: #999;
+            cursor: pointer;
+        }
+
+        .tnav-inner-1 .city strong {
+            cursor: pointer;
+        }
+
+        .tnav-inner ul {
+            position: absolute;
+            left: 260px;
+            top: 0;
+            height: 54px;
+            font-size: 20px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .tnav-inner ul li {
+            float: left;
+            margin: 10px 20px 0;
+
+        }
+
+        .tnav-inner ul li a {
+
+            display: block;
+            height: 33px;
+            color: #000000;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+        .tnav-inner ul li a:hover {
+            opacity: 0.9;
+            filter: alpha(opacity=90);
+            border-bottom: 2px solid #0AD7A3;
+        }
+
+        .tnav-inner ul li a.bg {
+            border-bottom: 2px solid #0AD7A3;
+            color: #000000;
+            opacity: 1;
+            filter: alpha(opacity=1)
+        }
+
+        .content {
+
+            width: 1024px;
+            margin: 30px auto;
+            clear: both;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+        }
+
+        .content-Left {
+            float: left;
+            width: 230px;
+            border-bottom: 2px solid #0AD7A3;
+            background: #fafafa;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .content-Right {
+            float: right;
+            width: 747px;
+            height: 2900px;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .content-Left a {
+            text-decoration: none;
+            color: #555;
+            font-size: 13px;
+            height: 22px;
+            white-space: normal;
+            background-color: transparent;
+        }
+
+        .content-Left a:hover {
+            text-decoration: underline;
+            color: #0AD7A3;
+            height: 22px;
+        }
+
+        .content-Left-1 h2, .content-Left-2 h2, .content-Left-3 h2, .content-Left-4 h2, .content-Left-5 h2, .content-Left-6 h2, .content-Left-7 h2 {
+            font-size: 18px;
+            font-weight: 500;
+            height: 22px;
+            margin: 10px 0;
+            padding-left: 8px;
+        }
+
+        .content-Left-1 a, .content-Left-2 a, .content-Left-3 a, .content-Left-4 a, .content-Left-5 a, .content-Left-6 a, .content-Left-7 a {
+            float: left;
+            padding: 0 8px;
+            white-space: normal;
+            margin: 0 5px 5px 0;
+        }
+
+        .content .content-Left-8 {
+            height: 48px;
+            background: url("img/arr_btn_c46d8e5.png") no-repeat 190px -18px;
+
+        }
+
+        .content .content-Left-8 a span {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .content .content-Left-8 a:hover {
+            border-bottom: none;
+        }
+
+        .content-Left-1 {
+            height: 166px;
+            padding: 6px 12px;
+        }
+
+        .content-Left-1T {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 166px;
+            padding: 6px 12px;
+            border: 2px solid transparent;
+        }
+
+        .content .content-Left-1F {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 228px;
+            padding: 10px;
+            width: 604px;
+            height: 910px;
+            border: 2px solid #cccccc;
+            background: #ffffff;
+        }
+
+        .content-Left-1:hover .content-Left-1T {
+            border: 2px solid #cccccc;
+            border-right: 0;
+            z-index: 102;
+            background: #fff;
+        }
+
+        .content-Left-1:hover .content-Left-1F {
+            display: block;
+            z-index: 101;
+
+        }
+
+        .content-Left dl {
+            padding: 10px 0 0 10px;
+            margin-top: 10px;
+            width: 540px;
+            overflow: hidden;
+        }
+
+        .content-Left dt {
+            width: 100px;
+            height: 112px;
+            float: left;
+        }
+
+        .content-Left dl dd {
+            width: 400px;
+            float: right;
+        }
+
+        .content-Left-1F dl:nth-child(1) dt, .content-Left-1F dl:nth-child(1) dd {
+            height: 112px;
+        }
+
+        .content-Left-1F dl:nth-child(2) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-1F dl:nth-child(3) dt, .content-Left-1F dl:nth-child(3) dd {
+            height: 56px;
+        }
+
+        .content-Left-1F dl:nth-child(4) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 84px;
+        }
+
+        .content-Left-1F dl:nth-child(5) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 84px;
+        }
+
+        .content-Left-1F dl:nth-child(6) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 56px;
+        }
+
+        .content-Left-1F dl:nth-child(7) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 84px;
+        }
+
+        .content-Left-1F dl:nth-child(8) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-1F dl:nth-child(9) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 112px;
+        }
+
+        .content-Left-1F dl:nth-child(10) dt, .content-Left-1F dl:nth-child(2) dd {
+            height: 56px;
+        }
+
+        /*第二个*/
+        .content-Left-2F dl:nth-child(1) dt, .content-Left-2F dl:nth-child(1) dd {
+            height: 61px;
+        }
+
+        .content-Left-2F dl:nth-child(2) dt, .content-Left-2F dl:nth-child(2) dd {
+            height: 33px;
+        }
+
+        .content-Left-2F dl:nth-child(3) dt, .content-Left-2F dl:nth-child(3) dd {
+            height: 33px;
+        }
+
+        /*第三个*/
+        .content-Left-3F dl:nth-child(1) dt, .content-Left-3F dl:nth-child(1) dd {
+            height: 112px;
+        }
+
+        .content-Left-3F dl:nth-child(2) dt, .content-Left-3F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-3F dl:nth-child(3) dt, .content-Left-3F dl:nth-child(3) dd {
+            height: 84px;
+        }
+
+        .content-Left-3F dl:nth-child(4) dt, .content-Left-3F dl:nth-child(4) dd {
+            height: 56px;
+        }
+
+        /*第四个*/
+        .content-Left-4F dl:nth-child(1) dt, .content-Left-4F dl:nth-child(1) dd {
+            height: 84px;
+        }
+
+        .content-Left-4F dl:nth-child(2) dt, .content-Left-4F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-4F dl:nth-child(3) dt, .content-Left-4F dl:nth-child(3) dd {
+            height: 28px;
+        }
+
+        .content-Left-4F dl:nth-child(3), .content-Left-4F dl:nth-child(3) {
+            height: 28px;
+        }
+
+        .content-Left-4F dl:nth-child(4) dt, .content-Left-4F dl:nth-child(4) dd {
+            height: 28px;
+        }
+
+        .content-Left-5F dl:nth-child(1) dt, .content-Left-5F dl:nth-child(1) dd {
+            height: 84px;
+        }
+
+        .content-Left-5F dl:nth-child(2) dt, .content-Left-5F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-5F dl:nth-child(3) dt, .content-Left-5F dl:nth-child(3) dd {
+            height: 84px;
+        }
+
+        .content-Left-5F dl:nth-child(4) dt, .content-Left-5F dl:nth-child(4) dd {
+            height: 28px;
+        }
+
+        .content-Left-5F dl:nth-child(5) dt, .content-Left-5F dl:nth-child(5) dd {
+            height: 56px;
+        }
+
+        .content-Left-5F dl:nth-child(6) dt, .content-Left-5F dl:nth-child(6) dd {
+            height: 28px;
+        }
+
+        .content-Left-5F dl:nth-child(7) dt, .content-Left-5F dl:nth-child(7) dd {
+            height: 28px;
+        }
+
+        .content-Left-6F dl:nth-child(1) dt, .content-Left-6F dl:nth-child(1) dd {
+            height: 56px;
+        }
+
+        .content-Left-6F dl:nth-child(2) dt, .content-Left-6F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-6F dl:nth-child(3) dt, .content-Left-6F dl:nth-child(3) dd {
+            height: 28px;
+        }
+
+        .content-Left-6F dl:nth-child(4) dt, .content-Left-6F dl:nth-child(4) dd {
+            height: 28px;
+        }
+
+        .content-Left-6F dl:nth-child(5) dt, .content-Left-6F dl:nth-child(5) dd {
+            height: 28px;
+        }
+
+        .content-Left-7F dl:nth-child(1) dt, .content-Left-7F dl:nth-child(1) dd {
+            height: 56px;
+        }
+
+        .content-Left-7F dl:nth-child(2) dt, .content-Left-7F dl:nth-child(2) dd {
+            height: 28px;
+        }
+
+        .content-Left-7F dl:nth-child(3) dt, .content-Left-7F dl:nth-child(3) dd {
+            height: 28px;
+        }
+
+        .content-Left-7F dl:nth-child(4) dt, .content-Left-7F dl:nth-child(4) dd {
+            height: 28px;
+        }
+
+        .content-Left-2T, .content-Left-3T, .content-Left-4T, .content-Left-5T {
+            position: relative;
+            height: 112px;
+            border: 2px solid transparent;
+
+        }
+
+        .content-Left-6T, .content-Left-7T {
+            position: relative;
+            height: 85px;
+            border: 2px solid transparent;
+        }
+
+        .content .content-Left-2F {
+            display: none;
+            position: absolute;
+            top: 140px;
+            left: 228px;
+            width: 604px;
+            height: 200px;
+            border: 2px solid #cccccc;
+        }
+
+        .content-Left-2:hover .content-Left-2T, .content-Left-3:hover .content-Left-3T, .content-Left-4:hover .content-Left-4T, .content-Left-5:hover .content-Left-5T {
+            border: 2px solid #cccccc;
+            border-right: 0;
+            z-index: 104;
+            background: #fff;
+        }
+
+        .content-Left-2:hover .content-Left-2F {
+            display: block;
+            z-index: 103;
+            background: #ffffff;
+        }
+
+        .content .content-Left-3F {
+            display: none;
+            position: absolute;
+            top: 140px;
+            left: 228px;
+            width: 604px;
+            height: 380px;
+            border: 2px solid #cccccc;
+        }
+
+        .content-Left-3:hover .content-Left-3F {
+            display: block;
+            z-index: 103;
+            background: #ffffff;
+        }
+
+        .content .content-Left-4F {
+            display: none;
+            position: absolute;
+            top: 340px;
+            left: 228px;
+            width: 604px;
+            height: 272px;
+            border: 2px solid #cccccc;
+        }
+
+        .content-Left-4:hover .content-Left-4F {
+            display: block;
+            z-index: 103;
+            background: #ffffff;
+        }
+
+        .content .content-Left-5F {
+            display: none;
+            position: absolute;
+            top: 340px;
+            left: 228px;
+            width: 604px;
+            height: 500px;
+            border: 2px solid #cccccc;
+        }
+
+        .content-Left-5:hover .content-Left-5F {
+            display: block;
+            z-index: 103;
+            background: #ffffff;
+        }
+
+        .content .content-Left-6F {
+            display: none;
+            position: absolute;
+            top: 520px;
+            left: 228px;
+            width: 604px;
+            height: 292px;
+            border: 2px solid #cccccc;
+        }
+
+        .content-Left-6:hover .content-Left-6F {
+            display: block;
+            z-index: 103;
+            border: 2px solid #cccccc;
+            background: #ffffff;
+        }
+
+        .content-Left-6:hover .content-Left-6T {
+            background: #ffffff;
+            border: 2px solid #cccccc;
+            border-right: 0;
+            z-index: 104;
+        }
+
+        .content .content-Left-7F {
+            display: none;
+            position: absolute;
+            top: 622px;
+            left: 228px;
+            width: 604px;
+            height: 234px;
+            border: 2px solid #cccccc;
+        }
+
+        .content-Left-7:hover .content-Left-7T {
+            background: #ffffff;
+            border: 2px solid #cccccc;
+            border-right: 0;
+            z-index: 104;
+        }
+
+        .content-Left-7:hover .content-Left-7F {
+            display: block;
+            z-index: 103;
+            border: 2px solid #cccccc;
+            background: #ffffff;
+        }
+
+        .content-Left > div:hover .content-Left > div > div {
+            display: block;
+        }
+
+        .content-Left > div:nth-child(2):hover .content-Left > div:nth-child(1) {
+            border: 2px solid #cccccc;
+            border-right: 0;
+        }
+
+        /*主体右侧部分*/
+
+        #searchInp1 {
+            height: 37px;
+            width: 590px;
+            padding: 0 10px;
+            border: 2px solid #0AD7A3;
+            font-size: 20px;
+
+        }
+
+        #searchBtn2 {
+            font-size: 20px;
+            text-align: center;
+            background: #0AD7A3;
+            width: 128px;
+            height: 41px;
+            border: 2px solid #0AD7A3;
+            cursor: pointer;
+            position: relative;
+            left: -4px;
+        }
+
+        .rightTnav {
+            clear: both;
+        }
+
+        .rightTnav ul li {
+            margin: 5px 0 15px 0;
+            list-style: none;
+            float: left;
+            font-size: 14px;
+
+        }
+
+        .rightTnav ul li a {
+            text-decoration: none;
+            padding: 0 12px;
+            color: #0AD7A3;
+        }
+
+        .rightTnav ul li a:hover {
+            text-decoration: underline;
+
+        }
+
+        .rightTnav ul li .z {
+            color: #000000;
+        }
+
+        .rightTnav ul li .z:hover {
+            color: #0AD7A3;
+        }
+
+        /*.right-1{*/
+        /*clear: both;*/
+        /*}*/
+        .right-1 .outer {
+            position: relative;
+            float: left;
+            width: 612px;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .right-1 .inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 612px;
+            height: 640px;
+        }
+
+        .right-1 .outer img {
+            display: block;
+            border: none; /*图片默认的有3个像素的padding-bottom*/
+            width: 612px;
+            height: 160px;
+
+        }
+
+        .right-1 .boxUl {
+            position: relative;
+        }
+
+        .right-1 .boxUl li {
+            list-style: none;
+            float: right;
+            height: 42px;
+            margin-bottom: 5px;
+            width: 113px;
+            border: 4px solid #C0C0C0;
+            background: url("img/control_current_2d877b3.png") no-repeat 0 0;
+        }
+
+        .right-1 .boxUl span {
+            position: absolute;
+            top: 39px;
+            right: 0;
+            background: url("img/control_current_2d877b3.png") no-repeat 0 0;
+            width: 127px;
+            height: 50px;
+            /*background: yellow;*/
+        }
+
+        .right-2 {
+            position: absolute;
+            top: 260px;
+            left: 0;
+            width: 745px;
+            height: 117px;
+            overflow: hidden;
+        }
+
+        .right-2 ul {
+            list-style: none;
+            width: 780px;
+            height: 118px;
+            clear: both;
+        }
+
+        .right-2 ul li {
+            position: relative;
+            float: left;
+            height: 113px;
+            width: 113px;
+            margin-right: 8px;
+            /*padding-right: 2px;*/
+            border: 2px solid #cccccc;
+            overflow: hidden;
+
+        }
+
+        .right-2 ul li img {
+            display: block;
+            border: none;
+            height: 113px;
+            width: 113px;
+        }
+
+        .right-2 ul li div {
+            /*display: block;*/
+            position: absolute;
+            top: 117px;
+            left: 0;
+            height: 115px;
+            color: #fafafa;
+            line-height: 115px;
+            width: 115px;
+            background: rgba(10, 215, 163, 0.9);
+        }
+
+        .right-2 ul li div h2 {
+            font-size: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            margin: 10px 8px 8px;
+        }
+
+        .right-2 ul li div em {
+            display: block;
+            width: 100px;
+            height: 5px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, .3);
+        }
+
+        .right-2 ul li div p {
+            font-size: 12px;
+            margin: 6px 8px;
+            width: 100px;
+            line-height: 18px;
+        }
+
+        .right-3 {
+            position: absolute;
+            top: 405px;
+            height: 2150px;
+        }
+
+        .right-3 a {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #00b38a;
+            font-size: 16px;
+            text-decoration: none;
+            width: 200px;
+            height: 34px;
+        }
+
+        .right-3 span {
+            font-size: 14px;
+            color: #999;
+            margin: 0;
+        }
+
+        .right-3 i {
+            margin-left: 10px;
+            font-size: 14px;
+            width: 68px;
+            height: 28px;
+            background-image: url("http://pstatic.lagou.com/www/static/index/modules/event/addIcon/img/promotion_a10ba97.png");
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+        }
+
+        .right-3 > div {
+            display: none;
+            height: 2130px;
+            border-bottom: 1px solid #c6c6c6;
+        }
+
+        .right-3 > div.select {
+            display: block;
+        }
+
+        .right-3 .right-3ul {
+            width: 745px;
+            height: 39px;
+            background: #f6f6f6;
+            overflow: hidden;
+            list-style: none;
+        }
+
+        .right-3 .right-3ul li {
+            float: left;
+            width: 100px;
+            height: 36px;
+            padding-left: 20px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 34px;
+            color: #333333;
+            border-top: 3px solid transparent;
+        }
+
+        .right-3 .right-3ul li.select {
+            border-top: 3px solid #00b38a;
+            background: white;
+
+        }
+
+        .right-3 .ulL li {
+            width: 745px;
+            height: 144px;
+            border-bottom: 1px dashed #ccccff;
+        }
+
+        .right-3 .ulL li .firstT {
+            height: 74px;
+            padding: 10px 0 0 15px;
+            overflow: hidden;
+
+        }
+
+        .right-3 .firstT-left {
+            width: 400px;
+            height: 84px;
+            float: left;
+        }
+
+        .right-3 .firstT-right {
+            width: 294px;
+            height: 84px;
+            float: right;
+        }
+
+        .right-3 .firstT-right .firstT-right-t {
+            height: 34px;
+        }
+
+        .right-3 .firstT-right .firstT-right-f {
+            height: 30px;
+            padding-top: 4px;
+        }
+
+        .right-3 .firstT-right span {
+            height: 19px;
+            margin-right: 6px
+        }
+
+        .right-3 .firstT-left-t {
+            width: 400px;
+            height: 34px;
+        }
+
+        .right-3 .firstT-left-f {
+            width: 400px;
+            height: 30px;
+            padding-top: 4px;
+
+        }
+
+        .right-3 .firstT-left-f span {
+            height: 19px;
+            margin-right: 6px;
+            color: #fa6041;
+        }
+
+        .right-3 .firstF {
+            font-size: 16px;
+            height: 29px;
+            padding: 10px 0 0 5px;
+            background: #f6f6f6;
+            overflow: hidden;
+        }
+
+        .right-3 .firstF-left {
+            width: 400px;
+            /*height: 29px;*/
+            float: left;
+        }
+
+        .right-3 .ulL li .firstF .firstF-right {
+            width: 294px;
+            /*height: 29px;*/
+            float: right;
+        }
+
+        .right-3 .ulL li .firstF .firstF-right span {
+            border: 1px solid #cccccc;
+            padding: 1px;
+        }
+
+        .right-4 {
+            position: absolute;
+            top: 2580px;
+            width: 745px;
+            height: 202px;
+            margin-top: 10px;
+            overflow: hidden;
+
+        }
+
+        .right-4 dt {
+            float: left;
+            height: 100%;
+            font-size: 18px;
+            color: #212121;
+            padding-top: 3px;
+        }
+
+        .right-4 a {
+            text-decoration: none;
+            display: inline-block;
+            height: 16px;
+            margin: 7px 5px;
+            font-size: 12px;
+            color: #555;
+            padding-right: 5px;
+            line-height: 16px;
+            border-right: 1px solid #ccc;
+        }
+        .right-4 a:hover{
+            text-decoration: underline;
+            color:#0061a6 ;
+        }
+
+        .right-3 a{
+            display: block;
+            position: absolute;
+            right:0;
+            top: 2100px;
+            width: 110px;
+            height: 32px;
+            line-height: 32px;
+           padding-right: 20px;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            background: #00b38a;
+            cursor: pointer;
+        }
+        .right-3 a:hover{
+            opacity: 0.9;
+            filter: alpha(opacity=90);
+        }
+        .right-3 .sp{
+            position: absolute;
+            top: 2108px;
+            right: 10px;
+            width: 50px;
+            height: 20px;
+            line-height: 32px;
+            display: inline-block;
+            background: url("img/arr_btn_c46d8e5.png")no-repeat  25px 0;
+        }
+
+        .foot {
+            position:absolute;
+            width: 100%;
+            top: 2900px;
+            height: 120px;
+        }
+        .foot1{
+
+            width: 100%;
+            height: 60px;
+            background:#00b38a ;
+        }
+        .foot2{
+            width: 100%;
+            height: 60px;
+        }
+        .foot ul{
+            overflow: hidden;
+            list-style: none;
+        }
+        .foot ul li:nth-child(1){
+            position: absolute;
+            left: 50px;
+            top: -54px;
+              float: left;
+            width: 95px;
+            height: 54px;
+            background: url("img/footbar_img_d9299f5.png")no-repeat;
+          }
+        .foot ul li:nth-child(1) h1{
+            position: absolute;
+            top: 57px;
+            left: 0;
+            width: 200px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 25px;
+            color: honeydew;
+        }
+        .foot ul li:nth-child(1) h2{
+            position: absolute;
+            top: 85px;
+            left: 0;
+            width: 200px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 20px;
+            color: honeydew;
+        }
+
+
+        .foot ul li:nth-child(2){
+            position: absolute;
+            right: 250px;
+            float: right;
+            width: 110px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            background: rgba(3,193,148,1);
+            cursor: pointer;
+        }
+
+        .foot ul li:nth-child(3){
+            float: right;
+            position: absolute;
+            right: 0;
+            width: 210px ;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 25px;
+            word-spacing: 5px;
+            padding-right: 40px;
+            color: white;
+            background: red;
+            cursor: pointer;
+        }
+        .foot2 div{
+            padding-left: 200px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .foot2 div a{
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            padding:  0 10px ;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<!--//头部导航栏-->
+<div id="head">
+    <div id="head-inner">
+        <div id="head-inner-1">
+            <a href="###" class="head-a1">拉勾APP</a>
+            <a href="###" class="head-a2">进入企业版</a>
+        </div>
+        <ul class="head-inner-r">
+            <li>登陆</li>
+            <li class="right">注册</li>
+        </ul>
+    </div>
+</div>
+<!--头部下半部分导航-->
+<div id="tnav">
+    <div class="tnav-inner">
+        <div class="tnav-inner-1">
+            <a href="###"><h1></h1></a>
+
+            <div class="city">
+                <strong>全国站</strong>
+                <em class="changeCity">[切换城市]</em>
+            </div>
+        </div>
+        <ul>
+            <li><a href="###" class="bg">首页</a></li>
+            <li><a href="###">公司</a></li>
+            <li><a href="###">一拍</a></li>
+        </ul>
+    </div>
+</div>
+<!--中间部分-->
+<div class="content">
+    <div class="content-Left">
+
+        <div class="content-Left-1">
+            <div class="content-Left-1T">
+                <h2>技术</h2>
+                <a href="###">Java</a><a href="###">PHP</a><a href="###">C</a><a href="###">C++</a><a
+                    href="###">Android</a>
+                <a href="###">iOS</a><a href="###">测试</a><a href="###">前端开发</a><a href="###">技术经理</a><a
+                    href="###">技术总监</a><a href="###">架构师</a><a href="###">CTO</a>
+            </div>
+            <div class="content-Left-1F">
+                <dl>
+                    <dt>后端开发</dt>
+                    <dd>
+                        <a href="">Java</a><a href="">Python</a><a href="">PhP</a><a href="">.NET</a><a href="">C#</a><a
+                            href="">C++</a><a href="">C</a><a href="">VB</a><a href="">Delphi</a><a href="">Perl</a><a
+                            href="">Ruby</a><a href="">Node.js</a><a href="">数据挖掘自然语言处理</a><a href="">搜索算法</a><a
+                            href="">精准推荐</a><a href="">全栈工程师</a><a href="">GoASP</a><a href="">Shell</a><a href="">后端其他开发</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>移动开发</dt>
+                    <dd><a href="">HTML5</a><a href="">Android</a><a href="">iOS</a><a href="">WP</a><a
+                            href="">移动开发其他</a></dd>
+                </dl>
+                <dl>
+                    <dt>前端开发</dt>
+                    <dd><a href="">web前端</a><a href="">Flash</a><a href="">html5</a><a href="">JavaScript</a><a href="">U3D</a><a
+                            href="">COCOS2D</a><a href="">前端开发其他</a></dd>
+                </dl>
+                <dl>
+                    <dt>测试</dt>
+                    <dd><a href="">测试工程师</a><a href="">自动化测试</a><a href="">功能测试</a><a href="">性能测试</a><a
+                            href="">白盒游戏</a><a
+                            href="">灰盒测试</a><a href="">黑盒测试</a><a href="">手机测试</a><a href="">硬件测试</a><a href="">测试经理</a><a
+                            href="">测试开发</a><a href="">测试其他</a></dd>
+                </dl>
+                <dl>
+                    <dt>运维</dt>
+                    <dd><a href="">运维工程师</a><a href="">运维开发工程师</a><a href="">网络工程师</a><a href="">系统工程师</a><a href="">IT支持</a><a
+                            href="">IDC</a><a href="">CDN</a><a href="">F5</a><a href="">系统管理员</a><a href="">病毒分析</a><a
+                            href="">WEB安全</a><a href="">网络安全</a><a href="">系统安全</a><a href="">运维经历</a><a
+                            href="">运维其他</a></dd>
+                </dl>
+                <dl>
+                    <dt>DBA</dt>
+                    <dd><a href="">MySQL</a><a href="">SQLSever</a><a href="">Oracle</a><a href="">DB@</a><a href="">MongoDB</a><a
+                            href="">ETL</a><a href="">Hive</a><a href="">数据仓库</a><a href="">DBA其他</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd>
+                        <a href="">技术经理</a><a href="">技术总监</a><a href="">架构师</a><a href="">CTO</a><a href="">运维总监</a><a
+                            href="">技术合伙人</a><a href="">项目总监</a><a href="">测试总监</a><a href="">安全专家</a><a href="">高端技术职位其他</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>项目管理</dt>
+                    <dd><a href="">项目经理</a><a href="">项目助理</a></dd>
+                </dl>
+                <dl>
+                    <dt>硬件开发</dt>
+                    <dd><a href="">硬件</a><a href="">嵌入式</a><a href="">自动化</a><a href="">单片机</a><a href="">电路设计</a><a
+                            href="">系统集成</a><a href="">FTPGA开发</a><a href="">DSP开发</a><a href="">ARM开发</a><a href="">PCB工艺</a><a
+                            href="">磨具设计</a><a href="">热传导</a><a href="">材料工程师</a><a href="">精益工程师</a><a
+                            href="">射频工程师</a><a href="">硬件开发其他</a></dd>
+                </dl>
+
+                <dl>
+                    <dt>企业软件</dt>
+                    <dd><a href="">实施工程师</a><a href="">售前工程师</a><a href="">售后工程师</a><a href="">BI工程师</a><a href="">企业软件其他</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="content-Left-2">
+            <div class="content-Left-2T">
+                <h2>产品</h2>
+                <a href="">产品总监</a><a href="">产品经理</a><a href="">移动产品经理</a><a href="">游戏策划</a>
+            </div>
+            <div class="content-Left-2F">
+                <dl>
+                    <dt>产品经理</dt>
+                    <dd><a href="">产品经理</a><a href="">网页产品经理</a><a href="">移动产品经理</a><a href="">产品助理</a><a href="">数据产品经理</a><a
+                            href="">电子产品经理</a><a href="">游戏策划</a><a href="">产品实习生</a></dd>
+                </dl>
+                <dl>
+                    <dt>产品设计师</dt>
+                    <dd><a href="">网页产品设计师</a><a href="">无线产品设计师</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd><a href="">产品部经理</a><a href="">产品总监</a><a href="">游戏制作人</a></dd>
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="content-Left-3">
+            <div class="content-Left-3T">
+                <h2>设计</h2>
+                <a href="">设计总监</a><a href="">UI</a><a href="">UE</a><a href="">交互设计</a><a href="">数据分析</a>
+            </div>
+            <div class="content-Left-3F">
+                <dl>
+                    <dt>视觉设计</dt>
+                    <dd>
+                        <a href="">网页设计</a><a href="">Flash设计师</a><a href="">APP设计师</a><a href="">美术设计师（2D/3D）</a><a
+                            href="">广告设计师</a><a href="">多媒体设计师</a><a href="">原画师</a><a href="">游戏特效</a><a href="">游戏界面设计师</a><a
+                            href="">视觉设计师</a><a href="">游戏场景</a><a href="">游戏动作</a></dd>
+                </dl>
+                <dl>
+                    <dt>用户研究</dt>
+                    <dd><a href="">数据分析师</a><a href="">用户研究员</a><a href="">游戏数值策划</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd><a href="">设计经理</a><a href="">设计总监</a><a href="">视觉设计经理</a><a href="">视觉设计总监</a><a href="">交互设计总监</a><a
+                            href="">用户研究经理</a><a href="">用户研究总监</a><a href=""></a></dd>
+                </dl>
+                <dl>
+                    <dt>交互设计</dt>
+                    <dd><a href="">网页交互设计师</a><a href="">交互设计师</a><a href="">无线交互设计师</a><a href="">硬件交互设计师</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="content-Left-4">
+            <div class="content-Left-4T">
+                <h2>运营</h2>
+                <a href="">新媒体运行</a><a href="">数据运营</a><a href="">运营总监</a><a href="">COO</a><a href="">编辑</a>
+            </div>
+            <div class="content-Left-4F">
+                <dl>
+                    <dt>运营</dt>
+                    <dd><a href="">内容运营</a><a href="">产品运营</a><a href="">数据运营</a><a href="">用户运营</a><a
+                            href="">品类运营</a><a href="">游戏运营</a><a href="">网络运营</a><a href="">活动运营</a><a href="">网络推广</a><a
+                            href="">运营专员</a><a href="">网店运营</a><a href="">新媒体运营</a><a href="">海外运营</a><a
+                            href="">运营经理</a></dd>
+                </dl>
+                <dl>
+                    <dt>编辑</dt>
+                    <dd><a href="">副主编</a><a href="">内容编辑</a><a href="">文案策划</a><a href="">记者</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服</dt>
+                    <dd><a href="">售后咨询</a><a href="">售后客服</a><a href="">淘宝客服</a><a href="">客服经理</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd><a href="">主编</a><a href="">运营总监</a><a href="">COO</a><a href="">客服总监</a></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="content-Left-5">
+            <div class="content-Left-5T">
+                <h2>市场与销售</h2>
+                <a href="">市场总监</a><a href="">市场推广</a><a href="">市场策划</a><a href="">BD</a><a href=""></a>
+            </div>
+            <div class="content-Left-5F">
+                <dl>
+                    <dt>市场/营销</dt>
+                    <dd><a href="">市场策划</a><a href="">市场顾问</a><a href="">市场推广</a><a href="">SEO</a><a href="">SEM</a><a
+                            href="">商务渠道</a><a href="">商业数据分析</a><a href="">活动策划</a><a href="">网络营销</a><a
+                            href="">海外市场</a><a href="">政府关系</a><a href="">市场营销</a></dd>
+                </dl>
+                <dl>
+                    <dt>公关</dt>
+                    <dd><a href="">媒介经理</a><a href="">广告协调</a><a href="">品牌公关</a></dd>
+                </dl>
+                <dl>
+                    <dt>销售</dt>
+                    <dd><a href="">销售专员</a><a href="">销售经理</a><a href="">客户代表</a><a href="">BD经理</a><a
+                            href="">商务渠道</a><a href="">渠道销售</a><a href="">代理商销售</a><a href="">销售助理</a><a
+                            href="">电话销售</a><a href="">销售顾问</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd><a href="">市场总监</a><a href="">销售总监</a><a href="">商务总监</a><a href="">CMO</a><a href="">公关总监</a><a
+                            href="">采购总监</a><a href="">投资总监</a></dd>
+                </dl>
+                <dl>
+                    <dt>供应链</dt>
+                    <dd><a href="">物流</a><a href="">仓储</a></dd>
+                </dl>
+                <dl>
+                    <dt>采购</dt>
+                    <dd><a href="">采购专员</a><a href="">采购经理</a><a href="">商品经理</a></dd>
+                </dl>
+                <dl>
+                    <dt> 投资</dt>
+                    <dd><a href="">分析师</a><a href="">投资顾问</a><a href="">投资经理</a>
+                </dl>
+            </div>
+        </div>
+
+        <div class="content-Left-6">
+            <div class="content-Left-6T">
+                <h2>职能</h2>
+                <a href="">HR</a> <a href="">行政</a> <a href="">会计</a> <a href="">出纳</a>
+            </div>
+            <div class="content-Left-6F">
+                <dl>
+                    <dt>人力资源</dt>
+                    <dd><a href="">人事/HR</a><a href="">培训经理</a><a href="">薪资福利经理</a><a href="">绩效考核经理</a><a
+                            href="">人力资源</a><a href="">招聘</a><a href="">HRBP</a><a href="">员工关系</a></dd>
+                </dl>
+                <dl>
+                    <dt>行政</dt>
+                    <dd><a href="">助理</a><a href="">前台</a><a href="">行政</a><a href="">总助</a><a href="">文秘</a></dd>
+                </dl>
+                <dl>
+                    <dt>财务</dt>
+                    <dd><a href="">会计</a><a href="">出纳</a><a href="">财务</a><a href="">结算</a><a href="">税务</a><a href="">审计</a><a
+                            href="">风控</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd><a href="">行政总监/经理</a><a href="">财务总监/经理</a><a href="">HRD/HRM</a><a href="">CFO</a><a href="">CEO</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>法务</dt>
+                    <dd><a href="">法务</a><a href="">律师</a><a href="">专利</a></dd>
+                </dl>
+
+            </div>
+        </div>
+        <div class="content-Left-7">
+            <div class="content-Left-7T">
+                <h2>金融</h2>
+                <a href="">投资</a> <a href="">融资</a> <a href="">并购</a> <a href="">风投</a>
+            </div>
+            <div class="content-Left-7F">
+                <dl>
+                    <dt>投融资</dt>
+                    <dd><a href="">投资经理</a><a href="">分析师</a><a href="">投资助理</a><a href="">融资</a><a href="">并购</a><a
+                            href="">行业研究</a><a href="">投资者关系</a><a href="">资产管理</a><a href="">财务顾问</a><a href="">交易员</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>风控</dt>
+                    <dd><a href="">风控</a><a href="">资信评估</a><a href="">合规稽查</a><a href="">律师</a></dd>
+                </dl>
+                <dl>
+                    <dt>税务审计</dt>
+                    <dd><a href="">审计</a><a href="">法务</a><a href="">会计</a><a href="">清算</a></dd>
+                </dl>
+                <dl>
+                    <dt>高端职位</dt>
+                    <dd><a href="">投资总监</a><a href="">融资总监</a><a href="">并购总监</a><a href="">风控总监</a><a href="">副总裁</a>
+                    </dd>
+                </dl>
+
+            </div>
+        </div>
+
+        <div class="content-Left-8">
+            <a href="" id="content-foot"><span>职能定位</span></a>
+        </div>
+
+    </div>
+    <!--右侧部分-->
+    <!--右侧头部-->
+    <div class="content-Right">
+        <div>
+            <input type="text" placeholder="全栈工程师" id="searchInp1"/>
+            <input type="button" value="搜索" id="searchBtn2"/>
+        </div>
+        <div class="rightTnav">
+            <ul>
+                <li>热门搜索:</li>
+                <li><a href="###">商务渠道</a></li>
+                <li><a href="###">C#</a></li>
+                <li><a href="###">PHP</a></li>
+                <li><a href="###">市场推广</a></li>
+                <li><a href="###" class="z">UI</a></li>
+                <li><a href="###" class="z">活动运营</a></li>
+                <li><a href="###">数据分析师</a></li>
+                <li><a href="###" class="z">SEO</a></li>
+                <li><a href="###">拉勾APP</a></li>
+            </ul>
+        </div>
+
+        <!--右侧轮播图-->
+        <div class="right-1">
+            <div class="outer" id="outer">
+                <div class="inner" id="inner">
+                    <img src="img/CgpzWlap3o-ACO5fAABaX_eLdn0817.JPG" alt=""/>
+                    <img src="img/CgqKkVbGxN-AUQtTAAEdxuT5LrU789.JPG" alt=""/>
+                    <img src="img/CgpzWlauBxeAYiQvAACENenhKPE642.JPG" alt=""/>
+                    <img src="img/CgpzWlap3o-ACO5fAABaX_eLdn0817.JPG" alt=""/>
+                </div>
+            </div>
+            <ul class="boxUl" id="boxUl">
+                <span class="span" id="span"></span>
+                <li><img src="img/CgqLKVap3pWAbNfUAAAK2h86Hi4790.JPG" alt=""/></li>
+                <li><img src="img/CgqLKVap3r6AFu3EAAAKCODfjkQ331.JPG" alt=""/></li>
+                <li><img src="img/CgqLKVap3pWAbNfUAAAK2h86Hi4790.JPG" alt=""/></li>
+            </ul>
+        </div>
+        <!--//绚丽效果-->
+        <div class="right-2">
+            <ul class="boxU2" id="boxU2">
+                <li id="boxU2Li" class="boxU2Li">
+                    <a href="">
+                        <img src="img/1.png" alt=""/>
+
+                        <div id="mark">
+                            <h2>时速云</h2>
+                            <em></em>
+
+                            <p title="新一代Docker容器云平台">新一代Docker容器云平台</p>
+
+                        </div>
+                    </a>
+                </li>
+
+                <li class="boxU2Li">
+                    <a href="">
+                        <img src="img/2.png" alt=""/>
+
+                        <div>
+                            <h2>康辉旅游</h2>
+                            <em></em>
+
+                            <p title="百亿级旅游电商平台、福利好、发展前景大">百亿级旅游电商平台、福利好、发展前景大</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="boxU2Li">
+                    <a href="">
+                        <img src="img/3.png" alt=""/>
+
+                        <div>
+                            <h2>ZAKER</h2>
+                            <em></em>
+
+                            <p title="传递价值资讯">传递价值资讯</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="boxU2Li">
+                    <a href="">
+                        <img src="img/4.jpg" alt=""/>
+
+                        <div>
+                            <h2>分子互动</h2>
+                            <em></em>
+
+                            <p title="创新传播领域搅局者">创新传播领域搅局者</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="boxU2Li">
+                    <a href="">
+                        <img src="img/5.png" alt=""/>
+
+                        <div>
+                            <h2>戎超科技</h2>
+                            <em></em>
+
+                            <p title="戎超科技是一家专业从事移动互联网研发的公司">戎超科技是一家专业从事移动互联网研发的公司</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="boxU2Li">
+                    <a href="">
+                        <img src="img/6.jpg" alt=""/>
+
+                        <div>
+                            <h2>联通支付</h2>
+                            <em></em>
+
+                            <p title="联通支付有限公司中国联通子公司">联通支付有限公司中国联通子公司</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--找工作模块、选项卡效果-->
+        <div class="right-3" id="right-3">
+            <ul class="right-3ul" id="right-3ul">
+                <li class="select" id="liOne">热门职位</li>
+                <li id="liTwo">最新职位</li>
+            </ul>
+            <div class="select" id="div1">
+                <div>
+                    <ul class="ulL">
+                        <li class="first">
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">高级数据挖掘工程师[北京]</a>
+                                        <span>11:11 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-30K</span>
+                                        <span>经验不限</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">拉勾网</div>
+                                    <div class="firstT-right-f">
+                                        <span>企业服务  招聘</span>
+                                        <span> /成长型(B轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“高成长型,发展空间大,独挡一面”</div>
+                                <div class="firstF-right">
+                                    <span>节日礼物</span>
+                                    <span>年底双薪</span>
+                                    <span>绩效奖金</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">web前端[北京]</a>
+                                        <span>2016-02-15 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-25K</span>
+                                        <span>经验不限</span>
+                                        <span>/  大专</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">康辉旅游网</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网  成长型（A轮）</span>
+                                        <span> /成长型(B轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“五险一金,免费旅游,餐补,固定团建,老板好”</div>
+                                <div class="firstF-right">
+                                    <span>千万级融资</span>
+                                    <span>年底双薪</span>
+                                    <span>交通补助</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">java[北京]</a>
+                                        <span>20-02-16 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>12K-24K</span>
+                                        <span>经验不限</span>
+                                        <span>/  大专</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">酷传</div>
+                                    <div class="firstT-right-f">
+                                        <span>企业服务  招聘</span>
+                                        <span> /成长型(B轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“扁平化管理 发展空间大 法定假期 带薪年假”</div>
+                                <div class="firstF-right">
+                                    <span>技能培训</span>
+                                    <span>扁平管理</span>
+                                    <span>股票期权</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">Java高级工程师[北京]</a>
+                                        <span>1天前发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-25K</span>
+                                        <span>经验5-10年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">快看小说</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.文化娱乐</span>
+                                        <span> 上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“专项奖金+公司股份+年底奖金+上升空间”</div>
+                                <div class="firstF-right">
+                                    <span>绩效奖金</span>
+                                    <span>专项奖金</span>
+                                    <span>年终分红</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">流媒体服务器研发工程师[北京]</a>
+                                        <span>2天前发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-30K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">高升控股</div>
+                                    <div class="firstT-right-f">
+                                        <span>企业服务.数据服务</span>
+                                        <span> /上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“上市公司，持续股权激励，薪酬福利好”</div>
+                                <div class="firstF-right">
+                                    <span>午餐补助</span>
+                                    <span>通讯津贴</span>
+                                    <span>带薪年假</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">.NET研发工程师（高级）[北京]</a>
+                                        <span>2016-02-04 发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>13K-25K</span>
+                                        <span>经验不限</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">Gridsum 国双</div>
+                                    <div class="firstT-right-f">
+                                        <span>数据服务</span>
+                                        <span> /成熟型(C轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“五险一金、补充医疗、弹性工作、奖金丰厚”</div>
+                                <div class="firstF-right">
+                                    <span>节日礼物</span>
+                                    <span>年度旅游</span>
+                                    <span>年底双薪</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">移动产品技术总监[北京]</a>
+                                        <span>2016-02-09 发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>30K-60K</span>
+                                        <span>经验不限</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">掌控</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.电子商务</span>
+                                        <span> /成长型(A轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“联合创始人，技术导向性团队，快速发展”</div>
+                                <div class="firstF-right">
+                                    <span>技能培训</span>
+                                    <span>专项奖金</span>
+                                    <span>轻松氛围</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">产品经理[北京]</a>
+                                        <span>2016-02-25 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>10K-20K</span>
+                                        <span>经验3-5年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">野狗</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /成长型(A轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“弹性工时、免费咖啡饮料、啤酒炸鸡和撸串、”</div>
+                                <div class="firstF-right">
+                                    <span>技能培训</span>
+                                    <span>股票期权</span>
+                                    <span>扁平管理</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">前端开发工程师[北京]</a>
+                                        <span>2016-03-01</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>20K-30K</span>
+                                        <span>经验3-5年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">联通支付有限公司</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /成长型(不需要融资)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“工作地点便利，免费下午茶”</div>
+                                <div class="firstF-right">
+                                    <span>带薪休假</span>
+                                    <span>年底双薪</span>
+                                    <span>帅哥多</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">分布式系统开发专家[北京]</a>
+                                        <span>1天前发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>20K-40K</span>
+                                        <span>经验3-5年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">阿里巴巴</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“阿里云打造公共、开放的云计算服务平台。”</div>
+                                <div class="firstF-right">
+                                    <span>岗位晋升</span>
+                                    <span>定期体检</span>
+                                    <span>年度旅游</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">高级技术工程师/北京[北京]</a>
+                                        <span>1天前发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>7K-12K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">玄武科技</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.招聘</span>
+                                        <span> /上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“年度旅游；带薪年假；五险一金；专业培训”</div>
+                                <!--<div class="firstF-right">-->
+                                <!--<span>带薪休假</span>-->
+                                <!--<span>年底双薪</span>-->
+                                <!--<span>帅哥多</span>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">美术设计师（2D/3D）[北京]</a>
+                                        <span>21：00发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>9K-12K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  学历不限</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">圣伟海业</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.企业服务</span>
+                                        <span> /初创型(天使轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“升职、加薪、成长型公司”</div>
+                                <!--<div class="firstF-right">-->
+                                <!--<span>带薪休假</span>-->
+                                <!--<span>年底双薪</span>-->
+                                <!--<span>帅哥多</span>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">高级UI设计师[北京]2</a>
+                                        <span>21：00发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-25K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/ 学历不限</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">动动</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.医疗健康</span>
+                                        <span> /成长型(A轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“你的设计在美国和中国排名前三不兴奋吗？”</div>
+                                <div class="firstF-right">
+                                    <span>节日礼物</span>
+                                    <span>股票期权</span>
+                                    <span>世界顶级团队</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">UI设计师[北京]</a>
+                                        <span>3天前发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>14K-15K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">拾光盒子</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.广告营销</span>
+                                        <span> /初创型(天使轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“弹性工作，扁平管理，无限零食”</div>
+                                <div class="firstF-right">
+                                    <span>带薪年假</span>
+                                    <span>年底双薪</span>
+                                    <span>股票期权</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="div2">
+                <div>
+                    <ul class="ulL" style="height: 2030px">
+                        <li class="first">
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">医疗拓展经理[北京]</a>
+                                        <span>一天前发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>6K-12K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">春雨移动健康</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /成熟型(C轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“高福利快晋升”</div>
+                                <div class="firstF-right">
+                                    <span>五险一金</span>
+                                    <span>股票期权</span>
+                                    <span>绩效奖金</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">SEO[北京]</a>
+                                        <span>2016-02-15 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>3K-6K</span>
+                                        <span>经验应届毕业生</span>
+                                        <span>/学历不限</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">瓜粉</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.广告营销</span>
+                                        <span> /初创型(不需要融资)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“职位诱惑 : 公司在亦庄！盈利的公司”</div>
+                                <div class="firstF-right">
+                                    <span>股票期权</span>
+                                    <span>带薪休假</span>
+                                    <span>绩效奖金</span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">.NET研发工程师（高级）[北京]</a>
+                                        <span>2016-02-04 发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>13K-25K</span>
+                                        <span>经验不限</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">Gridsum 国双</div>
+                                    <div class="firstT-right-f">
+                                        <span>数据服务</span>
+                                        <span> /成熟型(C轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“五险一金、补充医疗、弹性工作、奖金丰厚”</div>
+                                <div class="firstF-right">
+                                    <span>节日礼物</span>
+                                    <span>年度旅游</span>
+                                    <span>年底双薪</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">java[北京]</a>
+                                        <span>20-02-16 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>12K-24K</span>
+                                        <span>经验不限</span>
+                                        <span>/  大专</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">酷传</div>
+                                    <div class="firstT-right-f">
+                                        <span>企业服务  招聘</span>
+                                        <span> /成长型(B轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“扁平化管理 发展空间大 法定假期 带薪年假”</div>
+                                <div class="firstF-right">
+                                    <span>技能培训</span>
+                                    <span>扁平管理</span>
+                                    <span>股票期权</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">Java高级工程师[北京]</a>
+                                        <span>1天前发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-25K</span>
+                                        <span>经验5-10年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">快看小说</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.文化娱乐</span>
+                                        <span> 上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“专项奖金+公司股份+年底奖金+上升空间”</div>
+                                <div class="firstF-right">
+                                    <span>绩效奖金</span>
+                                    <span>专项奖金</span>
+                                    <span>年终分红</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">流媒体服务器研发工程师[北京]</a>
+                                        <span>2天前发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-30K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">高升控股</div>
+                                    <div class="firstT-right-f">
+                                        <span>企业服务.数据服务</span>
+                                        <span> /上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“上市公司，持续股权激励，薪酬福利好”</div>
+                                <div class="firstF-right">
+                                    <span>午餐补助</span>
+                                    <span>通讯津贴</span>
+                                    <span>带薪年假</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">移动产品技术总监[北京]</a>
+                                        <span>2016-02-09 发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>30K-60K</span>
+                                        <span>经验不限</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">掌控</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.电子商务</span>
+                                        <span> /成长型(A轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“联合创始人，技术导向性团队，快速发展”</div>
+                                <div class="firstF-right">
+                                    <span>技能培训</span>
+                                    <span>专项奖金</span>
+                                    <span>轻松氛围</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">产品经理[北京]</a>
+                                        <span>2016-02-25 发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>10K-20K</span>
+                                        <span>经验3-5年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">野狗</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /成长型(A轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“弹性工时、免费咖啡饮料、啤酒炸鸡和撸串、”</div>
+                                <div class="firstF-right">
+                                    <span>技能培训</span>
+                                    <span>股票期权</span>
+                                    <span>扁平管理</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">前端开发工程师[北京]</a>
+                                        <span>2016-03-01</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>20K-30K</span>
+                                        <span>经验3-5年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">联通支付有限公司</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /成长型(不需要融资)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“工作地点便利，免费下午茶”</div>
+                                <div class="firstF-right">
+                                    <span>带薪休假</span>
+                                    <span>年底双薪</span>
+                                    <span>帅哥多</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">分布式系统开发专家[北京]</a>
+                                        <span>1天前发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>20K-40K</span>
+                                        <span>经验3-5年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">阿里巴巴</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网</span>
+                                        <span> /上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“阿里云打造公共、开放的云计算服务平台。”</div>
+                                <div class="firstF-right">
+                                    <span>岗位晋升</span>
+                                    <span>定期体检</span>
+                                    <span>年度旅游</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">高级技术工程师/北京[北京]</a>
+                                        <span>1天前发布</span>
+                                        <i>升职季</i>
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>7K-12K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">玄武科技</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.招聘</span>
+                                        <span> /上市公司</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“年度旅游；带薪年假；五险一金；专业培训”</div>
+                                <!--<div class="firstF-right">-->
+                                <!--<span>带薪休假</span>-->
+                                <!--<span>年底双薪</span>-->
+                                <!--<span>帅哥多</span>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">美术设计师（2D/3D）[北京]</a>
+                                        <span>21：00发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>9K-12K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  学历不限</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">圣伟海业</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.企业服务</span>
+                                        <span> /初创型(天使轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“升职、加薪、成长型公司”</div>
+                                <!--<div class="firstF-right">-->
+                                <!--<span>带薪休假</span>-->
+                                <!--<span>年底双薪</span>-->
+                                <!--<span>帅哥多</span>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">高级UI设计师[北京]2</a>
+                                        <span>21：00发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>15K-25K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/ 学历不限</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">动动</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.医疗健康</span>
+                                        <span> /成长型(A轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“你的设计在美国和中国排名前三不兴奋吗？”</div>
+                                <div class="firstF-right">
+                                    <span>节日礼物</span>
+                                    <span>股票期权</span>
+                                    <span>世界顶级团队</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="firstT">
+                                <div class="firstT-left">
+                                    <div class="firstT-left-t">
+                                        <a href="###">UI设计师[北京]</a>
+                                        <span>3天前发布</span>
+                                        <!--<i>升职季</i>-->
+                                    </div>
+                                    <div class="firstT-left-f">
+                                        <span>14K-15K</span>
+                                        <span>经验1-3年</span>
+                                        <span>/  本科</span>
+                                    </div>
+                                </div>
+                                <div class="firstT-right">
+                                    <div class="firstT-right-t">拾光盒子</div>
+                                    <div class="firstT-right-f">
+                                        <span>移动互联网.广告营销</span>
+                                        <span> /初创型(天使轮)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstF">
+                                <div class="firstF-left">“弹性工作，扁平管理，无限零食”</div>
+                                <div class="firstF-right">
+                                    <span>带薪年假</span>
+                                    <span>年底双薪</span>
+                                    <span>股票期权</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="">查看更多</a><span class="sp"></span>
+        </div>
+
+        <!--最下侧-->
+        <div class="right-4">
+            <dt><u>友情链接</u></dt>
+            <a href="">手机软件</a><a href="">中大网校</a><a href="">人人都是产品经理</a><a href="">教师招聘</a><a href="">研究报告</a><a href="">汽车团购</a> <a href="">创投网</a><a href="">互联网的一些事/爱思英语网</a><a href="">徐州英才网</a><a href="">thinkphp</a><a href="">考研网</a><a href="">深圳人才网</a><a href="">银行招聘网</a><a href="">法律咨询网</a><a href="">兼职吧</a><a href="">服装人才网</a><a href="">安卓软件</a><a href="">银湖网</a><a href="">创意服务外包</a><a href="">西陆军事</a><a href="">中公公务员网校</a><a href="">老人网</a><a href="">找工作</a><a href="">招聘网</a><a href="">前瞻网</a><a href="">中关村创业服务平台</a><a href="">安徽招聘网</a><a href="">台州人才网</a><a href="">苏州人才网</a><a href="">教师网</a><a href="">汇博人才网</a><a href="">中国会计网</a><a href="">一品威客</a><a href="">钛媒体网</a><a href="">齐鲁人才网</a><a href="">邮编生活网</a><a href="">乌鲁木齐人才网</a><a href="">义乌人才网</a><a href="">PHP100人才网</a><a href="">培训网</a><a href=""><u>更多</u></a>
+
+        </div>
+    </div>
+</div>
+<div class="foot">
+<div class="foot1">
+    <ul>
+        <li>
+            <h1>在拉勾</h1>
+            <h2>发现新的职业机会</h2>
+        </li>
+        <li>登陆</li>
+        <li>急速注册</li>
+    </ul>
+</div>
+<div class="foot2">
+    <div class="ft">
+        <a href="">拉勾APP</a><a href="">拉勾微博</a><a href="">拉勾微信</a><a href="">版本更新</a><a href="">帮助中心</a><a href="">联系我们在线交流</a><a href="">服务热线</a><a href="">400-605-9900 (9:00 -18:00)</a>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/animate-只有匀速运动版.js"></script>
+<script type="text/javascript">
+    //左侧滑动+右面导航content-Left
+
+
+    var boxU2 = document.getElementById("boxU2"), boxU2Li = document.getElementById("boxU2Li"), oList = boxU2.getElementsByTagName("li"), mark = document.getElementById("mark");
+    var oDivs = boxU2.getElementsByTagName("div");
+    //获取元素的偏移量
+    function offset(cur) {
+        var t = cur.offsetTop;
+        var l = cur.offsetLeft;
+        var p = cur.offsetParent;
+        while (p) {
+            if (navigator.userAgent.indexOf("MSIE 8.0") == -1) {
+                t += p.clientTop;
+                l += p.clientLeft;
+            }
+            t += p.offsetTop;
+            l += p.offsetLeft;
+            p = p.offsetParent;
+        }
+        return {left: l, top: t};
+    }
+    //获取语速的属性值
+    function getCss(curEle, attr) {
+        var val = reg = null;
+        if ("getComputedStyle" in window) {
+            val = window.getComputedStyle(curEle, null)[attr]
+        } else {
+            if (attr === "opacity") {
+                val = curEle.currentStyle["filter"];
+                reg = /^alpha\(opacity=(\d+(?:\.\d+)?)\)$/;
+                val = reg.test(val) ? reg.exec(val)[1] / 100 : 1
+            } else {
+                val = curEle.currentStyle[attr]
+            }
+        }
+        reg = /^-?\d+(\.\d+)?(px|pt|em|rem)?$/;
+        return reg.test(val) ? parseFloat(val) : val;
+    }
+    //设置元素属性方法
+    function setCss(curEle, attr, value) {
+        if (attr === "float") {
+            curEle["style"]["cssFloat"] = value;
+            curEle["style"]["styleFloat"] = value;
+            return
+        }
+        if (attr === "opacity") {
+            value > 1 ? value = 1 : null;
+            value < 0 ? value = 0 : null;
+            curEle["style"]["opacity"] = value;
+            curEle["style"]["filter"] = "alpha(opacity=" + value * 100 + ")";
+            return;
+        }
+        var reg = /^(width|height|top|bottom|left|right|borderRadius|(margin|padding(Top|Left|Right|Bottom)))$/;
+        if (reg.test(attr)) {
+            reg = /^-?\d+(\.\d+)?$/;
+            if (reg.test(value)) {
+                curEle["style"][attr] = value + "px";
+                return
+            }
+        }
+        curEle["style"][attr] = value
+    }
+    //匀速运动方法
+    var zhufengEffect = {
+        Linear: function (t, b, c, d) {
+            return c * t / d + b
+        }
+    };
+    //动画效果方法
+    function animate(curEle, tarObj, duration, effect, callback) {
+        var fneffect = zhufengEffect.Linear;
+
+        var times = 0, beginObj = {}, changeObj = {};
+        for (var key in tarObj) {
+            if (tarObj.hasOwnProperty(key)) {
+                beginObj[key] = getCss(curEle, key);
+                changeObj[key] = tarObj[key] - beginObj[key]
+            }
+        }
+
+        window.clearInterval(curEle.timer);
+        curEle.timer = window.setInterval(function () {
+            times += 10;
+            if (times >= duration) {
+                window.clearInterval(curEle.timer);
+                for (var key in tarObj) {
+                    if (tarObj.hasOwnProperty(key)) {
+                        setCss(curEle, key, tarObj[key])
+                    }
+                }
+                typeof  callback === "function" ? callback.call(curEle) : null;
+                return
+            }
+            for (key in changeObj) {
+                if (changeObj.hasOwnProperty(key)) {
+                    var cur = fneffect(times, beginObj[key], changeObj[key], duration);
+                    setCss(curEle, key, cur)
+                }
+            }
+
+
+        }, 10)
+    }
+    //右侧轮播图
+    (function () {
+        var step = 0, outer = document.getElementById("outer"), inner = document.getElementById("inner"), span = document.getElementById("span"), boxUl = document.getElementById("boxUl"), oList = boxUl.getElementsByTagName("li"), innerImgList = inner.getElementsByTagName("img");
+        autoTimer = window.setInterval(autoMove, 3000);
+        function autoMove() {
+            step++;
+            if (step > 3) {
+                step = 1;
+                inner.style.top = 0;
+            }
+            zhufengAnimate(inner, {top: -step * 160}, 100);
+            changeTip();
+        }
+
+        var curL = utils.offset(span).top;
+
+        function changeTip() {
+            var tempStep = step;
+            if (tempStep > 2) {
+                tempStep = 0;
+                span.style.top = curL;
+            }
+            zhufengAnimate(span, {top: 39 + tempStep * 54}, 100)
+        }
+
+        imgMove();
+        function imgMove() {
+            for (var i = 0; i < oList.length; i++) {
+                var cur = oList[i];
+                cur.index = i;
+                cur.onmouseover = function () {
+                    window.clearInterval(autoTimer);
+                    step = this.index;
+                    zhufengAnimate(inner, {top: -step * 160}, 100);
+                    changeTip();
+                };
+                cur.onmouseout = function () {
+                    autoTimer = window.setInterval(autoMove, 3000);
+                }
+            }
+        }
+
+        function innerImgMove() {
+            for (var i = 0; i < innerImgList.length; i++) {
+                var curImg = innerImgList[i];
+                curImg.index = i;
+                curImg.onmouseover = function () {
+                    step = this.index;
+                    window.clearInterval(autoTimer);
+                }
+            }
+        }
+    })();
+    //上下左右动画效果
+    !(function () {
+
+        for (var i = 0; i < oList.length; i++) {
+            var bLeftAry = [], bTopAry = [], bBottomAry = [], bRightAry = [];
+            var cur = oList[i];
+            cur.index = i;
+            var bLeft = offset(oList[i]).left, bTop = offset(oList[i]).top, bRight = offset(oList[i]).left + cur.offsetWidth, bBottom = offset(oList[i]).top + cur.offsetHeight, WH = oList[i].offsetHeight;
+            !function (i) {
+                oList[i].onmouseenter = function (e) {
+                    e = e || window.event;
+                    this["mouseX"] = e.pageX - offset(oList[i]).left;
+                    this["mouseY"] = e.pageY - offset(oList[i]).top;
+                    if (this.mouseX <= this.mouseY && this.mouseX + this.mouseY < WH) {
+                        setCss(oDivs[i], "left", -117);
+                        setCss(oDivs[i], "top", 0);
+                        animate(oDivs[i], {left: 0, top: 0}, 300);
+                        return;
+                    }
+                    if (this.mouseX <= this.mouseY && this.mouseX + this.mouseY > WH) {
+                        setCss(oDivs[i], "left", 0);
+                        setCss(oDivs[i], "top", 117);
+                        animate(oDivs[i], {left: 0, top: 0}, 300);
+                        return;
+                    }
+                    if (this.mouseX >= this.mouseY && this.mouseX + this.mouseY < WH) {
+                        setCss(oDivs[i], "left", 0);
+                        setCss(oDivs[i], "top", -117);
+                        animate(oDivs[i], {left: 0, top: 0}, 300);
+                        return;
+                    }
+                    if (this.mouseX >= this.mouseY && this.mouseX + this.mouseY > WH) {
+                        setCss(oDivs[i], "left", 117);
+                        setCss(oDivs[i], "top", 0);
+                        animate(oDivs[i], {left: 0, top: 0}, 300);
+                    }
+                };
+
+                oList[i].onmouseleave = function (e) {
+                    e = e || window.event;
+                    this["mouseX"] = e.pageX;
+                    this["mouseY"] = e.pageY;
+                    if (this.mouseX <= offset(oList[i]).left + 1) {
+                        animate(oDivs[i], {left: -117, top: 0}, 300);
+                        return;
+                    }
+                    if (this.mouseX >= offset(oList[i]).left + oList[i].offsetWidth - 1) {
+                        animate(oDivs[i], {left: 117, top: 0}, 300);
+                        return
+                    }
+                    if (this.mouseY >= offset(oList[i]).top + oList[i].offsetHeight - 1) {
+                        animate(oDivs[i], {left: 0, top: 117}, 300);
+                        return
+                    }
+                    if (this.mouseY <= offset(oList[i]).top + 1) {
+                        animate(oDivs[i], {left: 0, top: -117}, 300);
+                    }
+                }
+            }(i)
+        }
+    })();
+
+    //找工作模块选项卡
+    (function () {
+        $(".right-3ul>li").click(function () {
+            $(this).addClass("select").siblings().removeClass('select');
+            $(".right-3>div").eq($(this).index()).addClass("select").siblings('div').removeClass('select');
+            //$(".right-3>div").eq($(this).index()).css("display","block").siblings('div').css("display","none")
+        });
+
+//  比较繁琐
+//      $("#liOne").click(function(){
+//            $(this).addClass("select").siblings().removeClass('select');
+//            $("#div1").css("display","block").next("div").css("display","none")
+//        });
+//        $("#liTwo").click(function(){
+//            $(this).addClass("select").siblings().removeClass('select');
+//            $("#div2").css("display","block").siblings('div').css("display","none")
+//        })
+    })()
+</script>
+</html>
